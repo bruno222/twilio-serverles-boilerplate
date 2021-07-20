@@ -5,6 +5,7 @@
   "scripts": {
     "test": "tsc --noEmit",
     "start": "twilio-run --functions-folder dist/functions --assets-folder dist/assets",
+    "watch": "nodemon",
     "deploy": "twilio-run deploy --functions-folder dist/functions --assets-folder dist/assets",
     "build": "tsc && npm run build:copy-assets",
     "build:copy-assets": "copyfiles src/assets/* src/assets/**/* --up 2 --exclude **/*.ts dist/assets/",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@twilio/runtime-handler": "1.1.2",
     "copyfiles": "^2.2.0",
+    "nodemon": "^2.0.12",
     "twilio-run": "^3.2.1",
     "typescript": "^3.9.10"
   },
